@@ -1,0 +1,20 @@
+{
+  "name": "api_server",
+  "version": "1.0.0",
+  "description": "\"smart shop products api\"",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node ./index.js",
+    "start:watch":"nodemon ./index.js"
+  },
+  "author": "jasper ngunjiri wambugu",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  }
+}

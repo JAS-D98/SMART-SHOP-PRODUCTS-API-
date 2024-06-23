@@ -17,7 +17,7 @@ export const getProducts=async(req, res)=>{
 export const getProductsById=async(req, res)=>{
     try {
         const id=parseInt(req.params.id);
-        const product=await pool.query("SELECT * FROM products WHERE product_id=$1", [id]);
+        const product=await pool.query("SELECT * FROM products WHERE productId=$1", [id]);
         if(product.rowCount === 0){
             res.status(404).json({success: false, data: "There's no such a product found"});
         }else{
@@ -31,8 +31,8 @@ export const getProductsById=async(req, res)=>{
 
 export const addProducts=async(req, res)=>{
     try {
-        const {product_thumbnail, product_title, product_description, product_cost, on_offer}=req.body;
-        const addProduct=await pool.query("INSERT INTO products (product_thumbnail, product_title, product_description, product_cost, on_offer) VALUES($1, $2, $3, $4, $5)", [product_thumbnail, product_title, product_description, product_cost, on_offer])
+        const {productThumbnail,productTitle,productDescription,productCost,onOffer}=req.body;
+        const addProduct=await pool.query("INSERT INTO products (productThumbnail, productTitle, productDescription, productCost, onOffer) VALUES($1, $2, $3, $4, $5)", [productThumbnail,productTitle,productDescription,productCost,onOffer])
         res.status(201).json({success: true, data: "Product has been successfully added"})
     } catch (error) {
         res.status(404).json({success: false, data: error.message});  
@@ -42,8 +42,8 @@ export const addProducts=async(req, res)=>{
 export const updateProducts=async(req, res)=>{
     try {
         const id=parseInt(req.params.id)
-        const {product_thumbnail, product_title, product_description, product_cost, on_offer}=req.body;
-        const products=await pool.query("UPDATE products SET product_thumbnail=$1, product_title=$2, product_description=$3, product_cost=$4, on_offer=$5 WHERE product_id=$6",[product_thumbnail, product_title, product_description, product_cost, on_offer, id]);
+        const {productThumbnail,productTitle,productDescription,productCost,onOffer}=req.body;
+        const products=await pool.query("UPDATE products SET productThumbnail=$1, productTitle=$2, productDescription=$3, productCost=$4, onOffer=$5 WHERE productId=$6",[productThumbnail,productTitle,productDescription,productCost,onOffer, id]);
         res.status(201).json({success: true, data: "product updated successfully"});
 
     } catch (error) {
@@ -54,7 +54,7 @@ export const updateProducts=async(req, res)=>{
 export const removeProduct=async(req, res)=>{
     try {
         const id=parseInt(req.params.id);
-        const productId=await pool.query("DELETE FROM products WHERE product_id=$1",[id]);
+        const productId=await pool.query("DELETE FROM products WHERE productId=$1",[id]);
         if (productId.rowCount === 0) {
             res.status(404).json({success: false, data: "Product not found for deletion"}); 
         } else {

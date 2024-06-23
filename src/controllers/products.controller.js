@@ -39,6 +39,18 @@ export const addProducts=async(req, res)=>{
     }
 }
 
+export const updateProducts=async(req, res)=>{
+    try {
+        const id=parseInt(req.params.id)
+        const {product_thumbnail, product_title, product_description, product_cost, on_offer}=req.body;
+        const products=await pool.query("UPDATE products SET product_thumbnail=$1, product_title=$2, product_description=$3, product_cost=$4, on_offer=$5 WHERE product_id=$6",[product_thumbnail, product_title, product_description, product_cost, on_offer, id]);
+        res.status(201).json({success: true, data: "product updated successfully"});
+
+    } catch (error) {
+        res.status(500).json({success: false, data: error.message});
+    }
+}
+
 export const removeProduct=async(req, res)=>{
     try {
         const id=parseInt(req.params.id);

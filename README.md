@@ -1,4 +1,35 @@
+# SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE
 ![A cover photo](./assets/banner.png)
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** 
+
+- [SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE](#smart-shop-products-api-documentation-general-usage)
+  - [BASE URL](#base-url)
+  - [BASIC END POINTS](#basic-end-points)
+    - [GET ALL PRODUCTS](#get-all-products)
+      - [Status 200 OK](#status-200-ok)
+      - [Status 404 Not Found](#status-404-not-found)
+      - [Status 500 Internal Server Error](#status-500-internal-server-error)
+    - [GET SPECIFIC PRODUCTS BY ID](#get-specific-products-by-id)
+      - [Status 200 OK](#status-200-ok-1)
+      - [Status 404 Not Found](#status-404-not-found-1)
+      - [Status 500 Internal Server Error](#status-500-internal-server-error-1)
+    - [ADD NEW PRODUCT TO THE DATABASE](#add-new-product-to-the-database)
+      - [Status 201 Created/ product Added](#status-201-created-product-added)
+      - [Status 500 Internal Server Error](#status-500-internal-server-error-2)
+    - [UPDATE SPECIFIC PRODUCTS DETAILS BY ID](#update-specific-products-details-by-id)
+      - [Status 200 OK](#status-200-ok-2)
+      - [Status 404 Not found](#status-404-not-found)
+      - [Status 500 Internal Server Error](#status-500-internal-server-error-3)
+    - [DELETE SPECIFIC PRODUCTS BY ID](#delete-specific-products-by-id)
+      - [Status 200 OK](#status-200-ok-3)
+      - [Status 404 NOT FOUND](#status-404-not-found)
+      - [Status 500 Internal Server Error](#status-500-internal-server-error-4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 # SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE
 

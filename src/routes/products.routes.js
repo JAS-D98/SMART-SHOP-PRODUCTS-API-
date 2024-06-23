@@ -14,11 +14,7 @@ router.get("/:id", getProductsById)
 router.post("/", addProducts)
 
 // Route for updating products
-router.put("/:id", updateProducts);
-
-router.patch("/:id", (req, res)=>{
-
-})
+router.patch("/:id", updateProducts);
 
 // Route for removing products by id
 router.delete("/:id", removeProduct)

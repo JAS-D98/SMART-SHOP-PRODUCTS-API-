@@ -1,11 +1,11 @@
-# SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE
+# SMART-SHOP PRODUCTS API DOCUMENTATION
 ![A cover photo](./assets/banner.png)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents** 
 
-- [SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE](#smart-shop-products-api-documentation-general-usage)
+- [API DOCUMENTATION GENERAL USAGE](#api-documentation-general-usage)
   - [BASE URL](#base-url)
   - [BASIC END POINTS](#basic-end-points)
     - [GET ALL PRODUCTS](#get-all-products)
@@ -31,7 +31,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-# SMART-SHOP PRODUCTS API DOCUMENTATION GENERAL USAGE
+# API DOCUMENTATION GENERAL USAGE
 
 These documentation will help you interact with the REST API to read products, add products, remove products and update products from a postgreSQL database.
   
